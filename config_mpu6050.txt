@@ -1,0 +1,20 @@
+[DEFAULT]
+#View point setting, how many samples
+viewpoint=50
+
+#Rolling value(Moving Average), how many samples
+RollingAvg=10
+
+#Trigger Value 1 setting (Positive), Over Acceleration value (G value)
+CheckValue1=0.03
+
+#Trigger Value 2 setting (Negative), Over Acceleration value (G value)
+CheckValue2=-0.03
+
+#Waiting time for stop and startup, how many sample
+waitTimeValue=1
+
+#Status VALUE # StatusVALUE1=Forward:1; StatusVALUE2=Backward=2
+StatusVALUE1=1
+StatusVALUE2=2
+

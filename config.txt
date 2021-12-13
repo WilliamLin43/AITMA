@@ -1,0 +1,46 @@
+[DEFAULT]
+#path to save images
+imagepath=/home/pi/tflite1/images
+imagepathnobox=/home/pi/tflite1/nobox
+
+#imagepath=/media/pi/USB/peopleTooCloseImages
+#imagepathnobox=/media/pi/USB/nobox
+
+#resolution of images
+resolution=300x300
+
+#Person Too close distance   .2
+distance=.2
+#min size to filter out boxes
+minsize=.025
+#the adjustment curve for distance
+distanceCurve=(1-ymid/300)
+
+#confidence threshold for TFLite Model
+threshold=.55
+
+#seconds to restart  the AGV
+PauseTime=5
+
+#number of frames a person is detected so that we know there is a person
+PersonDetectThreshold=3
+
+#number of frames no person is detected so that we know there is no one
+NotPersonDetectThreshold=5
+
+#the tfLite model location
+modeldir=Sample_TFLite_model/v2/
+#graph name - dont change this one
+graph=detect.tflite
+#label map - done change this one
+labels=labelmap.txt
+
+#use tpu
+edgetpu=FALSE
+
+#move foward to get rid of false positives
+moveForwardFailSafe=True
+#number of seconds it moves foward 
+moveForwardTime=3
+#amount of time to wait before moving forward 
+FPWaitTime=10

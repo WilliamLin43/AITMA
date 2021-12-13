@@ -1,0 +1,5 @@
+[DEFAULT]
+AGV_Mode=Stop
+AGV_Status=0
+e
+AGV_Status=2
